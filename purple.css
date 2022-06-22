@@ -1,0 +1,23 @@
+/* Creates variables */
+:root {
+
+    /* color used for website background */
+    --mainColor: #46344e;
+    --secondaryColor: #382a3f;
+
+    /* Border Color for website */
+    --borderColor: #1d1520;
+
+    /* color for headers and paragraphs */
+    --mainText: #fff;
+    --secondaryText: #eeee;
+
+    /* Color for personalizable website dots */
+    --themeDotBorder: #fff;
+
+    /* color for text box in who i am and its shadow*/
+    --previewBg: rgba(29, 21, 32, 0.8);
+    --previewShadow: #2b202f;
+
+    --btnColor: #7831a7;
+}

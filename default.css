@@ -1,0 +1,376 @@
+/* Creates variables */
+:root {
+
+    /* color used for website background */
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+
+    /* Border Color for website */
+    --borderColor: #bdbdbd;
+
+    /* color for headers and paragraphs */
+    --mainText: rgb(0, 0, 0);
+    --secondaryText: #2c2c2c;
+
+    /* Color for personalizable website dots */
+    --themeDotBorder: #24292e;
+
+    /* color for text box in who i am and its shadow*/
+    --previewBg: rgba(255, 255, 255, 0.822);
+    --previewShadow: #fae5f6;
+
+    --btnColor: black;
+}
+
+/* Structures where to put html words on page */
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+/* change color slower */
+body *{
+    transition: 1s;
+}
+
+/* font colors and style */
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+/* Font sizes for the texts */
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+/* Paragraph color and font*/
+p, li, span, label, input, textarea {
+    color: var(--secondaryText);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Remove underline for links and picks color*/
+a {
+    text-decoration: none;
+    color: #008cff
+}
+
+/* Removes bullets for navigations */
+ul {
+    list-style: none;
+}
+
+/* Background Color for those with darker class */
+.Darker {
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+/* Background color for lighter class */
+.Lighter {
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+/* Centers everything */
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Greeting wrapper styling */
+.greeting-wrapper {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+}
+
+/* Intro Wrapper */
+.intro-wrapper {
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    /* Changes box shadow for intro wrapper */
+    -webkit-box-shadow: -19px 30px 22px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -19px 30px 22px 1px rgba(0,0,0,0.75);
+    box-shadow: -19px 30px 22px 1px rgba(0,0,0,0.75);
+
+    /* Organizing how columns and nav is structured */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* Spaces between navigation intro section */
+    /* grid-template-rows: 4em 30em; */
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+}
+
+/* Nav Wrapper under intro wrapper */
+.nav-wrapper {
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+    border-radius: 5px 5px 0 0;
+}
+
+/* Rightmost "Contact Me" in navigation bar */
+#navigation {
+    margin: 0;
+    padding: 15px;
+}
+
+#navigation li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* actual dot organization */
+.dots-wrapper {
+    display: flex;
+    padding: 10px;
+}
+
+/* Dot Colors */
+#dot-1{ background-color: #FC6058; }
+#dot-2{ background-color: #fec02f; }
+#dot-3{ background-color: #2aca3e; }
+
+/* green, yellow, and red buttons */
+.browser-dot {
+    background-color: black;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin: 5px;
+
+    -webkit-box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.75);    
+}
+
+/* left column under intro wrapper */
+.left-column {
+    grid-area: left-column;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+/* Settings for picture image */
+#headShot {
+    display: block;
+    margin: 0 auto;
+
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+/* Customizing the dots under personalize this webpage */
+.theme-dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #000000;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.75); 
+
+    cursor: pointer;
+}
+
+/* Allows for theme dots to be hoverable */
+.theme-dot:hover { border-width: 5px; }
+
+/* Allow for website color change */
+#light-mode { background-color: #fff;}
+#blue-mode { background-color: #192734;}
+#green-mode { background-color: #78866b;}
+#purple-mode { background-color: #7e4c74;}
+
+/* font size for below personalize webpage */
+#settings-note { 
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Makes dots all next to each other */
+#theme-options-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* right column under intro wrapper */
+.right-column {
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow {
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+/* Working with the words in the Who I am */
+#preview {
+    width: 275px;
+    border: 1.5px solid #000000;
+    background-color: var(--previewBg);
+    padding: 15px;
+    padding-left: 50px;
+    position: relative;
+}
+
+/* Setting up corners for the who i am */
+.corner {
+    width: 7px;
+    height: 7px;
+    border-radius: 25%;
+    border: 1.5px solid #000000;
+    background-color: white;
+    position: absolute;
+}
+
+/* Adds little circles around the text box */
+#corner-tl {
+    top: -5px;
+    left: -5px;
+}
+#corner-tr {
+    top: -5px;
+    right: -5px;
+}
+#corner-br {
+    bottom: -5px;
+    right: -5px;
+}
+#corner-bl {
+    bottom: -5px;
+    left: -5px;
+}
+
+/* Makes the entire thing move to the left */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 5px;
+    padding-top: 5px;
+    gap: 100px;
+}
+
+/* Allows for skills under current expertise to be two columns  */
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/* Section for Kilo's social media */
+.social-links {
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+/* Size of kilo image */
+#kilo-image {
+    width: 60%;
+    padding-left: 115px;    
+}
+
+/* Moves around the boxes */
+#contact-form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+/* Message box enlargens */
+#contact-form label {
+    line-height: 2.7em;
+}
+#contact-form textarea {
+    min-height: 100px;
+    font-size: 14px;
+}
+
+
+/* Makes all the boxes one on top of the other */
+.input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+}
+
+/* submit button at the bottom */
+#submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--btnColor);
+    border: none;
+}
+
+/* Avoids issues with scroll bar */
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 95%;
+    }
+}
+
+/* For avoiding issues with right column and minimized tabs */
+@media screen and (max-width: 1200px) {
+    .intro-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+
+    /* If tab is minimized, right column will go beneath left colummn */
+    .right-column {
+        justify-content: center;
+    }
+}
